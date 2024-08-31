@@ -2,7 +2,7 @@ import {Title as TitleStyle} from './styles';
 import React from 'react';
 
 export type Props ={
-  children: string;
+  children?: string;
   fontSize?: number;
 }
 
