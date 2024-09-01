@@ -5,7 +5,11 @@ import Title from "../../components/Title"
 import Paragraph from '../../components/Paragraph';
 import { BotaoTema, Description, SidebarContainer } from './styles';
 
-const Sidebar =() => (
+type Props = {
+  themeChange: () =>void;
+}
+
+const Sidebar =(props: Props) => (
   <aside>
     <SidebarContainer>
       <Avatar/>
@@ -16,7 +20,7 @@ const Sidebar =() => (
       <Description type='principal' fontSize={12}>
         Desenvolvedor Full Stack
         </Description>
-      <BotaoTema>Trocar Tema</BotaoTema>
+      <BotaoTema onClick={props.themeChange}>Trocar Tema</BotaoTema>
     </SidebarContainer>
   </aside>
 )
